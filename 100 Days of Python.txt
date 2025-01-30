@@ -1,0 +1,4 @@
+Python Number manipulation and F string:
+--> round() we can use it to round of our float number like print(round(10/8)). We can also give additional parameter to print how many numbers after decimal like print(round(20/13, 3)).
+--> We can use f to format inside print() statement. like if we have variable name = Sam. Then we can print it like print(f"My name is {name}").
+--> Modulo (%): Modulo is a operator that used to find the remainder when two numbers are divided. i.e 10 % 3 =1
