@@ -1,11 +1,12 @@
 enemies =1
 
-def increase_enemies():
-    enemies = 2
+def increase_enemies(enemy):
     print(f"enemies inside function: {enemies}")
+    return enemy + 1
 
-increase_enemies()
+enemies = increase_enemies(enemies)
 print(f"enemies outside function: {enemies}")
+
 
 #There is no Block scope in Python
 
@@ -15,3 +16,5 @@ if game_level < 5:
     new_enemy = enemies_list[0]
 
 print(new_enemy)
+
+
