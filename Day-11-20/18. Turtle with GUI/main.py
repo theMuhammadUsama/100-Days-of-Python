@@ -1,53 +1,36 @@
-#Ways of importing modules
-#import turtle
-#from turtle import Turtle
-#from turtle import *
-#import turtle as t
+###This code will not work in repl.it as there is no access to the colorgram package here.###
+##We talk about this in the video tutorials##
+# import colorgram
+
+# rgb_colors = []
+# colors = colorgram.extract('image.jpg', 30)
+# for color in colors:
+#     r = color.rgb.r
+#     g = color.rgb.g
+#     b = color.rgb.b
+#     new_color = (r, g, b)
+#     rgb_colors.append(new_color)
 
 import turtle as t
 import random
-
-t.shape("turtle")
-t.color("black")
-
-# Making a square
-# for i in range(4):
-#     t.fd(100)
-#     t.right(90)
-# Making a dashed line
-# for _ in range(15):
-#     t.fd(10)
-#     t.color('white')
-#     t.fd(10)
-#     t.color('black')
-
-#Drawing Geometrical shapes
-# def draw_shape(num_sides):
-#     angle = 360 / num_sides
-#     for _ in range(num_sides):
-#         t.fd(100)
-#         t.right(angle)
-
-# for shape_side_n in range(3, 11):
-#     t.color(random.choice(colors))
-#     t.width(5)
-#     draw_shape(shape_side_n)
+# print(rgb_colors)
+color_list = [(202, 164, 110), (240, 245, 241), (236, 239, 243), (149, 75, 50), (222, 201, 136), (53, 
+93, 123), (170, 154, 41), (138, 31, 20), (134, 163, 184), (197, 92, 73), (47, 121, 86), (73, 43, 35), (145, 178, 149), (14, 98, 70), (232, 176, 165), (160, 142, 158), (54, 45, 50), (101, 75, 77), (183, 205, 171), (36, 60, 74), (19, 86, 89), (82, 
+148, 129), (147, 17, 19), (27, 68, 102), (12, 70, 64), (107, 127, 153), (176, 192, 208), (168, 99, 102)] 
+# x = 50
 t.colormode(255)
-def random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    random_color = (r, g, b)
-    return random_color
-
-directions = [0, 90, 180, 270]
-t.speed("fastest")
-t.pensize(10)
-for i in range(200):
-    t.color(random_color())
-    t.forward(20)
-    t.setheading(random.choice(directions))
-
+t.home()
+def fun():
+    x = 50
+    while x < 500:
+        for i in range(10):
+            r_color = random.choice(color_list)
+            t.dot(20, r_color)
+            t.penup()
+            t.fd(50)
+        t.goto(1,x) 
+        x += 50
+fun()   
 
 screen = t.Screen()
 screen.exitonclick()
